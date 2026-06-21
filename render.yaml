@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: bt-actividades-front
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist/bt-actividades-front
+    # Reescribe todas las rutas a index.html para que el ruteo de Angular (SPA)
+    # funcione al recargar/entrar directo a una URL como /login.
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
