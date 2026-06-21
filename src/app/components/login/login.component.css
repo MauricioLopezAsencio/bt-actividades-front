@@ -18,10 +18,17 @@
 }
 
 .login-logo-icon {
-  font-size: 2.8rem;
-  color: var(--color-accent);
-  display: block;
-  margin-bottom: 0.5rem;
+  font-size: 1.9rem;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-bottom: 0.9rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary), #6366f1);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
 }
 
 .login-title {
@@ -87,15 +94,16 @@
 
 .btn-login {
   width: 100%;
-  padding: 0.7rem;
-  background: rgba(66, 165, 245, 0.22);
-  border: 1px solid rgba(66, 165, 245, 0.45);
+  padding: 0.75rem;
+  background: linear-gradient(135deg, var(--color-primary), #6366f1);
+  border: none;
   border-radius: var(--radius-sm);
   color: #ffffff;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: filter var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.30);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +111,9 @@
 }
 
 .btn-login:hover:not(:disabled) {
-  background: rgba(66, 165, 245, 0.38);
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.40);
 }
 
 .btn-login:disabled {

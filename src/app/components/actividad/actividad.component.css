@@ -77,10 +77,10 @@ input[type="date"].form-control-modern::-webkit-calendar-picker-indicator {
 .btn-cargar-csv      { background: linear-gradient(135deg,#4a1942,#7b2d8b); padding: .55rem 1.1rem; font-size: .9rem; white-space: nowrap; }
 .btn-registros-fecha { background: linear-gradient(135deg,#1b5e20,#2e7d32); padding: .55rem 1.1rem; font-size: .9rem; white-space: nowrap; }
 .btn-estadisticas    { background: linear-gradient(135deg,#1a5276,#2471a3); padding: .55rem 1.1rem; font-size: .9rem; white-space: nowrap; }
-.btn-consultar       { background: linear-gradient(135deg,#1565c0,#1976d2); padding: .55rem 1.4rem; font-size: .9rem; }
+.btn-consultar       { background: linear-gradient(135deg,#2563eb,#3b82f6); padding: .55rem 1.4rem; font-size: .9rem; }
 .btn-ms-connect      { background: linear-gradient(135deg,#0078d4,#106ebe); padding: .5rem 1.1rem;  font-size: .88rem; }
 .btn-ms-connect:disabled { opacity: .50; }
-.btn-registrar { white-space: nowrap; background: linear-gradient(135deg,#1565c0,#1976d2); padding: .3rem .7rem; font-size: .78rem; }
+.btn-registrar { white-space: nowrap; background: linear-gradient(135deg,#2563eb,#3b82f6); padding: .3rem .7rem; font-size: .78rem; }
 .btn-registrar:disabled { transform: none; }
 .btn-registrar.btn-registrado { background: rgba(67,160,71,.25); border: 1px solid rgba(67,160,71,.45); color: #81c784; cursor: default; }
 .btn-registrar-todo { white-space: nowrap; background: linear-gradient(135deg,#6a1b9a,#8e24aa); padding: .35rem .85rem; font-size: .8rem; }
@@ -135,7 +135,7 @@ input[type="date"].form-control-modern::-webkit-calendar-picker-indicator {
   appearance: auto; cursor: pointer;
   transition: border-color var(--transition-fast), background var(--transition-fast);
 }
-.select-proyecto option { background: #1e2a3a; color: #fff; }
+.select-proyecto option { background: #1c2330; color: #fff; }
 .select-proyecto:focus { border-color: var(--color-accent); background: rgba(255,255,255,.16); box-shadow: 0 0 0 .15rem rgba(66,165,245,.22); }
 .select-proyecto:disabled { opacity: .40; cursor: not-allowed; }
 
@@ -195,8 +195,8 @@ input[type="date"].form-control-modern::-webkit-calendar-picker-indicator {
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 50%;
-  background: rgba(15,20,70,0.90);
-  border: 1px solid rgba(66,165,245,0.30);
+  background: var(--surface-3);
+  border: 1px solid rgba(96,165,250,0.30);
   display: flex;
   align-items: center;
   justify-content: center;

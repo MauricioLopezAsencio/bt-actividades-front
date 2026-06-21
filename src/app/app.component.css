@@ -57,7 +57,7 @@
 /* Mobile collapsed menu */
 @media (max-width: 767.98px) {
   .navbar-collapse {
-    background: rgba(15, 20, 70, 0.95);
+    background: var(--surface-3);
     border-radius: var(--radius-md);
     padding: 0.5rem 0.75rem;
     margin-top: 0.5rem;
@@ -80,9 +80,7 @@
    FOOTER
    ============================================================ */
 .app-footer {
-  background: rgba(15, 20, 70, 0.70);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(13, 17, 23, 0.55);
   border-top: 1px solid var(--navbar-border);
   padding: 0.85rem 1rem;
 }
