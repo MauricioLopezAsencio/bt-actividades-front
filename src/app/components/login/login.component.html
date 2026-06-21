@@ -1,0 +1,69 @@
+<div class="login-wrapper">
+  <div class="glass-card login-card">
+
+    <!-- Logo -->
+    <div class="login-header">
+      <i class="bi bi-tools login-logo-icon"></i>
+      <h1 class="login-title">Bitácora</h1>
+      <p class="login-subtitle">Inicia sesión para continuar</p>
+    </div>
+
+    <!-- Formulario -->
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+      <!-- Usuario -->
+      <div class="login-field">
+        <label class="form-label-modern">Usuario</label>
+        <div class="input-icon-wrap">
+          <i class="bi bi-person input-icon"></i>
+          <input
+            class="form-control form-control-modern"
+            formControlName="user"
+            placeholder="Ingresa tu usuario"
+            autocomplete="username" />
+        </div>
+        <small class="field-error"
+          *ngIf="form.get('user')?.invalid && form.get('user')?.touched">
+          El usuario es requerido.
+        </small>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="login-field">
+        <label class="form-label-modern">Contraseña</label>
+        <div class="input-icon-wrap">
+          <i class="bi bi-lock input-icon"></i>
+          <input
+            [type]="showPass ? 'text' : 'password'"
+            class="form-control form-control-modern"
+            formControlName="password"
+            placeholder="Ingresa tu contraseña"
+            autocomplete="current-password" />
+          <button type="button" class="toggle-pass" (click)="showPass = !showPass" tabindex="-1">
+            <i [class]="showPass ? 'bi bi-eye-slash' : 'bi bi-eye'"></i>
+          </button>
+        </div>
+        <small class="field-error"
+          *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+          La contraseña es requerida.
+        </small>
+      </div>
+
+      <!-- Error global -->
+      <div class="login-error" *ngIf="errorMsg">
+        <i class="bi bi-exclamation-circle me-1"></i>{{ errorMsg }}
+      </div>
+
+      <!-- Submit -->
+      <button class="btn-login" type="submit" [disabled]="form.invalid || loading">
+        <span *ngIf="!loading">
+          <i class="bi bi-box-arrow-in-right me-1"></i>Iniciar sesión
+        </span>
+        <span *ngIf="loading">
+          <i class="bi bi-gear-fill swal-gear" style="font-size:1rem"></i> Verificando...
+        </span>
+      </button>
+
+    </form>
+  </div>
+</div>
